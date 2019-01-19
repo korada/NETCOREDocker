@@ -1,0 +1,23 @@
+version: "3.0"
+
+services:
+  dockerdemo_api:
+    image: dockerdemo:latest
+    command: ["DockerDemo.Api.dll"]
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      - dockerdemo
+    
+  dockerdemo_ui:
+    image: dockerdemo:latest
+    command: ["DockerDemo.UI.dll"]
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      - dockerdemo
+    ports:
+      - "5001:80"
+
+networks:
+  dockerdemo:
