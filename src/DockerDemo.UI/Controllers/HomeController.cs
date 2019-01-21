@@ -19,7 +19,7 @@ namespace DockerDemo.UI.Controllers
         private readonly HttpClient _client;
         public async Task<IActionResult> Index()
         {
-            var result = await _client.GetAsync("/values");
+            var result = await _client.GetAsync("/api/values");
             ViewData["result"] = result;
             return View();
 
