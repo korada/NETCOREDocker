@@ -7,7 +7,7 @@
 - ctrl+z to stop containers
 
 ## Deploy option 2
-- docker swarm init (need to be done for local. Swarm already exists in docker cluster)
+- docker swarm init
 - docker stack deploy -c docker-compose.yml dockerdemo
 - docker stack rm dockerdemo to remove the stack and services
 
